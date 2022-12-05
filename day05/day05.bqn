@@ -2,8 +2,8 @@ str←•Import"../bqn-libs/strings.bqn"
 
 stacks‿proc←(@+2⥊10)str.Split•FChars⊑•args
 stacks↩⍉¯1↓>(@+10)str.Split stacks
-stacks↩str.Trim¨<˘((≠stacks)⥊0‿1‿0‿0)/stacks
-proc↩>(⊑str.ToNats)¨¨0‿1‿0‿1‿0‿1⊸/¨¯1↓" "⊸str.Split¨ (@+10)str.Split proc
+stacks↩' '⊸≠⊸/¨<˘((≠stacks)⥊0‿1‿0‿0)/stacks
+proc↩>str.ToNats¨¯1↓(@+10)str.Split proc
 # •Show stacks
 
 Move←{
